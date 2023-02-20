@@ -5,9 +5,9 @@ document.addEventListener("DOMContentLoaded", () => {
     links.forEach((link, i) => {
         link.addEventListener("click", () => {
             const coordinates = phases[i].getBoundingClientRect();
-            
+
             window.scrollTo({
-                top: coordinates.top,
+                top: coordinates.top + window.scrollY,
                 behavior: "smooth",
             });
         });
